@@ -77,7 +77,7 @@ types/
   - nombre del usuario,
   - respuestas temporales,
   - último reporte generado por encuesta.
-- La encuesta se presenta **por bloques de dimensión** para reducir carga cognitiva y mejorar UX móvil.
+- La encuesta se presenta en modalidad **una pregunta por pantalla** y en **orden aleatorio** para disminuir sesgos por categoría.
 - El reporte incluye botón de **impresión/exportación a PDF** usando `window.print()`.
 
 ## Nota de uso

@@ -20,9 +20,11 @@ export function ResultPanel({ survey, userName, result }: { survey: SurveyKey; u
     if (isStress) {
       removeLocalStorage(STORAGE_KEYS.stressAnswers);
       removeLocalStorage(STORAGE_KEYS.stressResult);
+      removeLocalStorage(STORAGE_KEYS.stressOrder);
     } else {
       removeLocalStorage(STORAGE_KEYS.scriptsAnswers);
       removeLocalStorage(STORAGE_KEYS.scriptsResult);
+      removeLocalStorage(STORAGE_KEYS.scriptsOrder);
     }
     router.push(`/encuestas/${survey}`);
   };
