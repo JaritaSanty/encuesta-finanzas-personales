@@ -1,47 +1,25 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-1f1ffbb2a6633e3c.js",
-      "static/chunks/117-095d01d03a7c8efa.js",
-      "static/chunks/main-app-1b0919a00ac95cee.js",
-      "static/chunks/app/_not-found/page-0bef6941c74b3917.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-1f1ffbb2a6633e3c.js",
-      "static/chunks/117-095d01d03a7c8efa.js",
-      "static/chunks/main-app-1b0919a00ac95cee.js",
-      "static/css/54871d76473a8ba6.css",
-      "static/chunks/app/layout-d90520e44c542e90.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/encuestas/[survey]/page": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-1f1ffbb2a6633e3c.js",
-      "static/chunks/117-095d01d03a7c8efa.js",
-      "static/chunks/main-app-1b0919a00ac95cee.js",
-      "static/chunks/972-80ae992f0ef44c3e.js",
-      "static/chunks/678-905aa1656a1c1ba3.js",
-      "static/chunks/600-0a0890948749bf28.js",
-      "static/chunks/app/encuestas/[survey]/page-b7a88669ffe5ea2d.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-1f1ffbb2a6633e3c.js",
-      "static/chunks/117-095d01d03a7c8efa.js",
-      "static/chunks/main-app-1b0919a00ac95cee.js",
-      "static/chunks/972-80ae992f0ef44c3e.js",
-      "static/chunks/app/page-0c06ec579c5e9d71.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/encuestas/[survey]/page.js"
     ],
     "/resultados/[survey]/page": [
-      "static/chunks/webpack-d757b501b8c835e1.js",
-      "static/chunks/fd9d1056-1f1ffbb2a6633e3c.js",
-      "static/chunks/117-095d01d03a7c8efa.js",
-      "static/chunks/main-app-1b0919a00ac95cee.js",
-      "static/chunks/972-80ae992f0ef44c3e.js",
-      "static/chunks/678-905aa1656a1c1ba3.js",
-      "static/chunks/398-feddeb495602eb81.js",
-      "static/chunks/app/resultados/[survey]/page-0330eff011adb846.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/resultados/[survey]/page.js"
     ]
   }
 }
