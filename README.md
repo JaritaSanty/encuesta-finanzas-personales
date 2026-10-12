@@ -1,4 +1,4 @@
-# Perfil Financiero Personal
+# Perfil Financiero Personal (v2)
 
 Aplicación web educativa para evaluar dos dimensiones de finanzas personales:
 
