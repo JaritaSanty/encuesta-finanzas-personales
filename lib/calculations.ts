@@ -1,6 +1,8 @@
+import { guideFor } from "./guidance";
 import { Question, Answers, DimensionResult, ScriptResult, StressResult, SurveyKey } from "@/types";
 
 function dimensionScores(questions: Question[], answers: Answers): Record<string, number> {
+  if (!questions.length || questions.some((q) => !Number.isInteger(answers[q.id]) || answers[q.id] < 1 || answers[q.id] > 5)) throw new Error("Completa todas las respuestas con valores de 1 a 5.");
   return questions.reduce<Record<string, number>>((acc, q) => {
     acc[q.dimension] = (acc[q.dimension] ?? 0) + (answers[q.id] ?? 0);
     return acc;
@@ -36,17 +38,16 @@ export function calculateStressResult(questions: Question[], answers: Answers): 
     interpretation: stressDimensionInterpretation(score),
   }));
 
-  const total = Object.values(answers).reduce((sum, val) => sum + val, 0);
+  const total = Object.values(totals).reduce((sum, val) => sum + val, 0);
 
   return {
     total,
     level: interpretStressTotal(total),
     dimensions,
     recommendations: [
-      "Define un presupuesto de 50/30/20 para recuperar sensación de control.",
-      "Crea un fondo de emergencia con transferencias automáticas pequeñas.",
-      "Agenda una revisión semanal de finanzas de 20 minutos para reducir rumiación.",
-      "Si la ansiedad es persistente, busca apoyo profesional en salud mental o asesoría financiera.",
+      guideFor([...dimensions].sort((a, b) => b.score - a.score)[0].dimension).action,
+      "Haz una lista de lo que recibes, tus gastos necesarios y las fechas de pago. Ajusta el plan a tu realidad; no hay un porcentaje de ahorro obligatorio.",
+      "Si tienes margen después de cubrir lo necesario, separa una cantidad posible para imprevistos. Empieza con una meta pequeña y revisable.",
     ],
     generatedAt: new Date().toISOString(),
   };
@@ -69,10 +70,9 @@ export function calculateScriptsResult(questions: Question[], answers: Answers):
     dominant: mixedProfile ? `${top.dimension} (perfil mixto)` : top.dimension,
     mixedProfile,
     recommendations: [
-      "Identifica qué creencias sobre dinero heredaste en tu familia y cuáles quieres conservar.",
-      "Usa un diario financiero breve para registrar decisiones y emociones asociadas.",
-      "Transforma creencias rígidas en reglas equilibradas: ahorro + disfrute responsable.",
-      "Define metas por horizonte (corto, medio y largo plazo) para reducir sesgos de guion.",
+      guideFor(top.dimension).action,
+      "Recuerda una decisión reciente con dinero. Anota qué pensabas, cómo te sentías y qué cambiarías la próxima vez.",
+      "Elige una meta concreta y realista, con un importe y una fecha. Revísala según tus ingresos y necesidades.",
     ],
     generatedAt: new Date().toISOString(),
   };

@@ -19,3 +19,23 @@ body {
     background: white;
   }
 }
+
+body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+h1, h2, h3, legend { text-wrap: balance; }
+::selection { background: #dbeafe; color: #172554; }
+a { text-underline-offset: 4px; }
+button, input { accent-color: #1d4ed8; }
+:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
+.report-section { break-inside: avoid; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print { main { padding: 0 !important; } .shadow-soft { box-shadow: none; } .report-section { margin-top: 16px; } details > * { display: block !important; } }
+
+/* Survey accents follow the two entry cards. */
+.survey-theme[data-survey="estres-financiero"] .bg-primary { background-color: #0f766e; }
+.survey-theme[data-survey="estres-financiero"] .text-primary { color: #0f766e; }
+.survey-theme[data-survey="estres-financiero"] .border-primary { border-color: #0f766e; }
+.survey-theme[data-survey="estres-financiero"] .bg-blue-50 { background-color: #f0fdfa; }
+.survey-theme[data-survey="estres-financiero"] .text-blue-900,
+.survey-theme[data-survey="estres-financiero"] .text-blue-950 { color: #134e4a; }
+.survey-theme[data-survey="estres-financiero"] input { accent-color: #0f766e; }
+@media print { .recharts-wrapper, .recharts-surface { print-color-adjust: exact; } }

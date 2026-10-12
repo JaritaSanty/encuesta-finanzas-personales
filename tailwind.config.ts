@@ -26,7 +26,7 @@ const config: Config = {
         },
         muted: {
           DEFAULT: "hsl(220 20% 95%)",
-          foreground: "hsl(220 9% 46%)",
+          foreground: "hsl(220 12% 38%)",
         },
         accent: {
           DEFAULT: "hsl(187 92% 41%)",

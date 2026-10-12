@@ -83,3 +83,25 @@ types/
 ## Nota de uso
 
 Esta herramienta tiene un fin **educativo y orientativo**. No reemplaza evaluación clínica, psicológica ni asesoría financiera profesional.
+
+## Experiencia y reporte educativo
+
+- Preguntas en lenguaje sencillo, opciones grandes y progreso accesible.
+- Retoma la primera pregunta pendiente después de recargar.
+- Reporte con barras horizontales, valores textuales y explicación de escalas.
+- Recomendaciones según el área con mayor puntaje, sin porcentajes obligatorios de ahorro.
+- Nombre o apodo, confirmación antes de reiniciar y manejo de almacenamiento bloqueado.
+- Los puntajes son orientativos: este cuestionario no es una escala clínica validada ni permite evaluar capacidad de ahorro o crédito.
+- Los reportes guardados se recalculan desde respuestas válidas, conservando su fecha.
+
+### Comprobaciones
+
+```bash
+npm run lint
+node tests/calculations.cjs
+npm run build
+```
+
+Los gráficos de barras y radar usan Recharts (SVG), con etiquetas accesibles y puntajes textuales. El reporte muestra siempre el guion con mayor puntaje, todos los empates y los guiones cercanos a un punto.
+
+Referencia de educación financiera para las acciones generales: https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/ (no valida el cuestionario).
